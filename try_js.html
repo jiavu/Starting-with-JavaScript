@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <!-- https://www.w3schools.com/js/js_output.asp -->
+
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>try_js</title>
+        
+        <!-- To import a JavaScript file:
+        <script src="main.js"></script>
+
+        The line above should maybe be placed at the bottom of the <body> to improve display speed.
+        
+        To add several script files to one page - use several script tags:
+        <script src="main2.js"></script>
+        -->
+
+        <!-- To import a css file (External style sheet) :
+        <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+        -->
+        <style>
+            /* If no css file or in addition: Internal style sheet.  */
+        </style>
+    </head>
+    <body>
+        <!-- Scripts can be placed in head and in body. Placing scripts at the bottom of the <body> element
+            improves the display speed, because script compilation slows down the display. -->
+        <script>
+            /*
+            JavaScript Display Possibilities:
+
+                JavaScript can "display" data in different ways:
+
+                - Writing into an HTML element, using innerHTML.
+                - Writing into the HTML output using document.write().
+                - Writing into an alert box, using window.alert().
+                - Writing into the browser console, using console.log().
+            */
+        </script>
+
+        <!-- Using innerHTML: -->
+        <h1 id="html-element"></h1>
+        <script>
+            document.getElementById("html-element").innerHTML = "Displayed using .innerHTML";
+        </script>
+        <p>document.getElementByID("id").innerHTML = content;</p>
+
+        <!-- Using document.write()-->
+        <!-- Using it after an HTML document is fully loaded, will delete all existing HTML. -->
+        <script>
+            document.write('Displayed by document.write(content)');
+        </script>
+        <p>document.write(content);<br>Using it after an HTML document is fully loaded, will delete all existing HTML.</p>
+
+        <!-- Using window.alert() -->
+        <script>
+            window.alert("Displayed by window.alert()");
+        </script>
+
+        <!-- Using console.log() -->
+        <!-- For debugging purposes, you can use the console.log() method to display data. -->
+        <p>
+            For debugging purposes, you can use the console.log() method to display data.<br>
+            Console on Chrome: check development tools (F12 for Windows, alt+Cmd+i on MacOS).
+        </p>
+        <script>
+            console.log("Displayed by console.log");
+        </script>
+
+    </body>
+</html>
