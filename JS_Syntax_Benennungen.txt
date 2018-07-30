@@ -1,0 +1,75 @@
+https://www.w3schools.com/js/js_statements.asp
+https://www.w3schools.com/js/js_syntax.asp
+...
+
+Statements
+all instructions like z = x + y; are called Statments.
+JavaScript statements are composed of Values, Operators, Expressions, Keywords and Comments.
+Semicolons separate JavaScript statements.
+
+Code Blocks {}
+if (condition) {
+    code block;
+} else {
+    code block;
+} // (no semicolon)
+
+Keywords
+JavaScript statements often start with a keyword to identify the JavaScript action to be performed.
+Some keywords:
+break, continue, debugger, do ... while, for, function, if ... else, return, switch,
+try ... catch,
+var, const, let (they are used to tell the browser to create variables.)
+
+Values
+The JavaScript syntax defines two types of values: Fixed values and variable values.
+Fixed values are called literals. variable values are called variables.
+Literals: 10.634, 5, "String", 'String', (true/false, undefined)
+
+Variables
+JavaScript uses several keywords to declare variables:
+var, const, let
+const varName = ... ;
+You can declare many variables in one statement. Separate by comma.
+var person = "Me", price = 9.99, currency = "€";
+
+Operators
+Arithmetic operators:
++, -, *, /
+% (Modulus, Division Remainder)
+++ (Increment), -- (Decrement)
+
+Assignment operators: =, +=, -=, *=, /=, %=
+e. g. x /= y is the same as x = x / y;
+var x, y; x = 5; y = 6;
+Strings + numbers: The result of adding "5" + 2 + 3 is 523
+Numbers + strings: The result of adding 2 + 3 + "5" is 55
+
+Comparison Operators:
+==, ===, !=, !==, >, <, >=, <=, ?
+
+Logical Operators
+&& (logical and), || (logical or), ! (logical not)
+
+Type Operators:
+typeof, instanceof
+
+Bitwise Operators:
+..........
+
+Expressions
+An expression is a combination of values, variables and operators, which computes to a value.
+5 * 10
+y + 1
+'String1' + 'String2'
+
+Comments
+/* several lines */
+// single line comment
+
+Identifiers
+Identifiers are names. They are used to name variables (and keywords, and functions, and labels).
+In JS, the first character must be a letter, or an underscore, or a dollar sign.
+
+Character Set
+JS used the Unicode character set.
