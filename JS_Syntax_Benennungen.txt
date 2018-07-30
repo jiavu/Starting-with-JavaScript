@@ -1,4 +1,4 @@
-https://www.w3schools.com/js/js_statements.asp
+﻿https://www.w3schools.com/js/js_statements.asp
 https://www.w3schools.com/js/js_syntax.asp
 ...
 
@@ -24,7 +24,7 @@ var, const, let (they are used to tell the browser to create variables.)
 Values
 The JavaScript syntax defines two types of values: Fixed values and variable values.
 Fixed values are called literals. variable values are called variables.
-Literals: 10.634, 5, "String", 'String', (true/false, undefined)
+Literals: 10.634, 5, "String", 'String', true/false, null, undefined
 
 Variables
 JavaScript uses several keywords to declare variables:
