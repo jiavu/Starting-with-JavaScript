@@ -46,7 +46,8 @@ const varName2 = () => {
 
 // There are several ways to refactor (umgestalten) arrow function syntax!
 
-// Concise body //                  (concise = knapp, bündig, geballt)
+
+// Concise body //                          (concise = knapp, bündig, geballt)
 /* Functions that take a single parameter should not use parentheses. But if a function takes
 zero or multiple parameters, parentheses are required!
 A function composed of a sole single-line block is automatically returned so the return keyword
@@ -65,3 +66,13 @@ const varName3 = par => par + 1;
 // Function constructor //
 var sum = new Function('a', 'b', 'return a + b');
 ergebnis = sum(2, 6);
+
+
+//////////////////////////////
+
+// Method syntax (ES6) //
+// only when setting as an object property ??
+
+const object = {
+    method() {return "something"};
+};
