@@ -1,0 +1,33 @@
+JavaScript.info
+
+https://www.w3schools.com/js/
+
+=============================
+
+JavaScript Refferences:
+
+https://developer.mozilla.org/en-US/docs/Web/JavaScript
+(auch in Deutsch übersetzt)
+
+(Wichtig zum Beispiel: iterator methods, siehe unter Array
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array
+)
+
+=============================
+
+To check browser support informations about compatibility with features (of ES6):
+
+https://caniuse.com/
+
+=============================
+
+To transpilate from ES6 to ES5 with Babel
+
+(transpile: taking source code written in one language and transforming into another language
+THAT HAS A SIMILAR LEVEL OF ABSTRACTION.)
+!= compiling (transform a source code into another language).
+
+Terminal-Eingabe:
+npm install babel-cli
+npm install babel-preset-env
+npm run build
