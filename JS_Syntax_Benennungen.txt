@@ -1,4 +1,4 @@
-﻿https://www.w3schools.com/js/js_statements.asp
+https://www.w3schools.com/js/js_statements.asp
 https://www.w3schools.com/js/js_syntax.asp
 ...
 
@@ -25,6 +25,7 @@ Values
 The JavaScript syntax defines two types of values: Fixed values and variable values.
 Fixed values are called literals. variable values are called variables.
 Literals: 10.634, 5, "String", 'String', true/false, null, undefined
+null is the same as None (empty, nothing) in Python. 
 
 Variables
 JavaScript uses several keywords to declare variables:
@@ -53,6 +54,9 @@ Logical Operators
 
 Type Operators:
 typeof, instanceof
+typeof can also be used as a function style!
+As an operator: typeof x;
+As a function: typeof(x);
 
 Bitwise Operators:
 ..........

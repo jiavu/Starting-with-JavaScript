@@ -4,10 +4,10 @@ https://www.w3schools.com/js/
 
 =============================
 
-JavaScript Refferences:
+JavaScript References:
 
 https://developer.mozilla.org/en-US/docs/Web/JavaScript
-(auch in Deutsch übersetzt)
+(auch in Deutsch Ÿbersetzt)
 
 (Wichtig zum Beispiel: iterator methods, siehe unter Array
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array
@@ -19,15 +19,73 @@ To check browser support informations about compatibility with features (of ES6)
 
 https://caniuse.com/
 
-=============================
 
-To transpilate from ES6 to ES5 with Babel
+==========================================================
+To transpilate from ES6 to ES5 with Babel (using a Node package)
+==========================================================
 
 (transpile: taking source code written in one language and transforming into another language
 THAT HAS A SIMILAR LEVEL OF ABSTRACTION.)
 != compiling (transform a source code into another language).
 
+=============================
+
+npm - node package manager
+
+to access and manage Node packages. (it's like pip for Python)
+
 Terminal-Eingabe:
-npm install babel-cli
-npm install babel-preset-env
-npm run build
+- npm init
+  The 'npm init' command creates a package.json file in the root directory of the project
+  file. It contains informations about the current JS project.
+	- Metadata (project title, description, authors..)
+	- list of node packages required for the project
+	- key-value pairs for command line scripts
+
+  You need Node installed on your computer for npm init.
+
+- npm install
+  To install a new Node package locally. 'npm install'
+- npm install babel-cli -D
+- npm install babel-preset-env -D
+  
+  (babel-cli = command line Babel tools; babel-preset-env = code for mapping any JS
+  feature to ES5. npm run build = Start transpiling.)
+  
+  -D instructs npm to add each package to a property called devDependencies in
+  package.json.
+  Once they are listed, other developers can run the project without installing each
+  package separately. They can simply run 'npm install' - it instructs npm to look inside
+  package.json and download all of the packages listed.
+  
+
+=============================
+
+Transpiling
+
+What I have to do before:
+
+1.) (Install Node)
+2.) create package.json by 'npm init'
+3.) install babel-cli and babel-reset-env (see above)
+4.) specify the initial JS version (see below)
+5.) specify the script in package.json to initiate transpilation (see below)
+6.) run transpilation by
+	'npm run build'.
+	
+	The 'npm run build' command runs the build script in package.json.
+
+
+You can specify the initial JavaScript version inside of a file named .babelrc in your root directory (to create, run 'touch .babelrc').
+Babel will look in .babelrc when executed.
+Just write:
+{ "presets" : ["env"] } // (to transpire any code from versions ES6 and later.)
+in file.
+
+To initiate the transpilation, I have to specify a script in package.json.
+under "test" in value of "scripts":
+
+"build": "babel src -d lib"
+
+=============================
+
