@@ -19,6 +19,11 @@ To check browser support informations about compatibility with features (of ES6)
 
 https://caniuse.com/
 
+=============================
+
+HTTP request methods (documentation)
+
+https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods
 
 ==========================================================
 To transpilate from ES6 to ES5 with Babel (using a Node package)

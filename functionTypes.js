@@ -95,7 +95,7 @@ object1.method1()               // call method.
 // Method syntax ES6 //
 
 const object2 = {
-    method() {return "something"};
+    method() {return "something"}
 };
 
 
