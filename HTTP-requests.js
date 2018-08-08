@@ -21,9 +21,9 @@ XHR: XMLHttpRequest
 
 */
 
-//////////////////////////////////////////////////
-// Boilerplate code for an AJAX XHR GET request //
-//////////////////////////////////////////////////
+//////////////////////////////////////////////////////
+// I.1 Boilerplate code for an AJAX XHR GET request //
+//////////////////////////////////////////////////////
 
 const xhr = new XMLHttpRequest();
 const url = "https://some-api/";
@@ -68,9 +68,9 @@ const responseField = document.querySelector('#responseField');     // TEXTFELD 
 const urlWithQueryString = "https://iam-the-url?key=value&anotherkey=anothervalue";
 
 
-///////////////////////////////////////////////////
-// Boilerplate code for an AJAX XHR POST request //
-///////////////////////////////////////////////////
+///////////////////////////////////////////////////////
+// I.2 Boilerplate code for an AJAX XHR POST request //
+///////////////////////////////////////////////////////
 
 const xhr = new XMLHttpRequest();
 const url = "http://api-to-call-com/endpoint";
@@ -87,3 +87,57 @@ xhr.onreadystatechange = () => {
 
 xhr.open('POST', url);
 xhr.send(data);
+
+
+////////////////////////
+// II. Promises (ES6) //
+////////////////////////
+
+/* pending, fulfilled, rejected
+pending: when a promise is created or waiting for data
+fulfilled: the asynchronous operation was handled successfully.
+rejected: the asynchronous operation was unsuccessful.
+
+Once a promise is fulfilled or jecected, you can chain an additional method to the original promise.
+*/
+
+
+///////////////////////////////////////////////////////////
+// II.1 Boilerplate code for a GET request using fetch() //
+///////////////////////////////////////////////////////////
+
+/*
+- Creates request object that contains informations the API needs,
+- Sends that request object to the API endpoint,
+- Returns a promise that resolves to a response object, which containts the status of the promise
+  with information the API sent back.
+
+*/
+
+// fetch() function | url | .then() method | an arrow function with one parameter (response).
+// v                   v                  v             v
+fetch("https://api-to-call.com/endpoint").then(response => {
+    /* the first arrow function is the success callback. It's the first argument of the .then() method.
+        .then() will fire only after the promise status of fetch() has been resolved. */
+
+    if (response.ok) {            // If there were no errors response.ok will be true
+        return response.json()    //  and the code will return response.json().
+    }
+    
+    // create a new error:
+    throw new Error('Request failed!'); // The code will throw this error when response.ok is falsy.
+
+}, networkError => {                /* 2nd argument:
+                                    2nd arrow function of .then(). Separated from first by comma.
+                                    Give 1 parameter into it (name it networkError.) */
+    console.log(networkError.message);
+    // If we could not reach the endpoint at all, e.g., the server is down, then we would get this networkError.
+}
+).then(jsonResponse => {return jsonResponse});                      // callback function.
+/* The 2nd .then()'s success callback won't run until the previous .then() method has finished running.
+   It will also not run if there was an error thrown previously. */
+
+
+//////////////////////////////////////////////////////
+// II.2 Boilerplate code for a fetch() POST request //
+//////////////////////////////////////////////////////
