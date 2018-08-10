@@ -73,6 +73,15 @@ Arithmetic operators:
 ++ (Increment), -- (Decrement)		// number = 3; number-- // returns 2
 					// Increment and Decrement can be applied only to a variable!
 					// There is a difference between prefix (--number) and postfix form.
+an unary operator has one operand,
+x = -1; x = -x;			// x is now 1
+a binary operator has two operands,
+x = x - 1
+a unary plus would convert operands that are not numbers.
++true	// 1
++""	// 0
++ concatenates strings and non-strings with strings. // 4 + 5 + "px" = "9px"
+
 
 Assignment operators:
 
@@ -86,7 +95,24 @@ Numbers + strings: The result of adding 2 + 3 + "5" is 55
 
 Comparison Operators:
 
-==, ===, !=, !==, >, <, >=, <=, ?
+==, ===, !=, !==, >, <, >=, <=, ?		// The result of comparisons is a boolean (true or false).
+
+For comparisons of Strings the lexicographical order of Unicode is used.
+"Glow" > "Glee"	// true
+'Bee' > 'Be'	// true
+Lowercase characters have a greater index in the internal encoding table.
+"a" > "A"	// true
+Operands of different types are converted to a number by the equality operator ==.
+"01" == 1	// true
+1 > false	// true
+A strict equality operator === checks the equality without type conversion.
+"01" === 1		// false
+null !== undefined	// true
+null != undefined	// false
+Comparison and equality check of null and undefined with 0 are edge cases:	// http://javascript.info/comparison
+Comparisons (>=) convert null to a number. Equality checks (==) do not...
+Comparisons convert unfedined to NaN.
+Equality check: undefined would equal null, but not 0
 
 
 Logical Operators

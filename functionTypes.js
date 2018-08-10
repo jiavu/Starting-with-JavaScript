@@ -28,7 +28,7 @@ fName(arg1, arg2);
 // Function Expressions: //
 ////////////////////////////
 
-/* keyword (const/let/var), variable name, =, keyword, parentheses, parameters (or empty),
+/* keyword (const/let/var), variable name, = assignment, keyword, parentheses, parameters (or empty),
 code block, semi-colon.
 */
 const varName1 = function (par1, par2) {
@@ -38,7 +38,7 @@ const varName1 = function (par1, par2) {
 
 // Arrow function syntax //
 
-/* keyword (const/let/var), variable name, =,
+/* keyword (const/let/var), variable name, = assignment,
 parentheses (with parameters or empty) followed by an arrow, body, semi-colon. */
 
 const varName2 = () => {
@@ -57,7 +57,7 @@ A function composed of a sole single-line block is automatically returned so the
 can be removed (implicit return).
 A function composed of a sole single-line block does not need brackets. */
 
-// keyword, variable name, =, parameter, sole single-line block, semi-colon.
+// keyword, variable name, = assignment, parameter, sole single-line block, semi-colon.
 const varName3 = par => par + 1;
 
 
