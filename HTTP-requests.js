@@ -74,7 +74,7 @@ const urlWithQueryString = "https://iam-the-url?key=value&anotherkey=anotherValu
 
 const xhr = new XMLHttpRequest();
 const url = "http://api-to-call-com/endpoint";
-const data = JSON.stringify ({id : '200'});
+const data = JSON.stringify ({id : '200'});             // JSON.stringify() is a method to put data into json format (?)
 /* Converts data (converts a value) to a JSON string. By converting the value to a
    string, we can then send the data to a server. */
 
@@ -96,6 +96,7 @@ xhr.setRequestHeader("apiKey", apiKey);
 //
 
 xhr.send(data);
+
 
 
 ////////////////////////
@@ -199,3 +200,9 @@ fetch(url, {// settings object //
 ).then(jsonResponse => {
     return jsonResponse;    // The purpose of this step is to view the JSON that was returned
 });                         // from the previous .then().
+
+
+
+///////////////////////////////////
+// III. async GET requests (ES8) //
+///////////////////////////////////

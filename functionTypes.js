@@ -43,7 +43,7 @@ parentheses (with parameters or empty) followed by an arrow, body, semi-colon. *
 
 const varName2 = () => {
     //function body
-};
+}; // semi-colon yes or not?
 
 
 // There are several ways to refactor (umgestalten) arrow function syntax!
