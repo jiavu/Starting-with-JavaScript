@@ -115,9 +115,28 @@ Comparisons convert unfedined to NaN.
 Equality check: undefined would equal null, but not 0
 
 
-Logical Operators
+Logical Operators:
 
 && (logical and), || (logical or), ! (logical not)
+
+
+Ternary (Question mark) Operator:
+(ternary because it has 3 operands)
+let result = condition ? value1 : value2;
+same as:
+if (condition) {
+	result = value1;
+	} else {
+	result = value2;
+	}
+example:
+let accessAllowed = (age > 18) ? true : false;			//btw, let accessAllowed = age > 18; would be the same.
+
+Sequence of ternary operators:
+let result = condition1 ? value1 :
+	condition2 ? value2 :
+	condition3 ? value3 :
+	value4;
 
 
 Type Operators:
