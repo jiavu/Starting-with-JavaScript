@@ -203,9 +203,9 @@ fetch(url, {// settings object //
 
 
 
-/////////////////////////////////////////////////////////////////////////
-// III. Boilderplate code for an async GET request (ES8) (using await) //
-/////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////
+// III.1 Boilderplate code for an async GET request (ES8) (using await) //
+//////////////////////////////////////////////////////////////////////////
 
 const getData = async() => {
     try {
@@ -239,3 +239,23 @@ async function getData() {          // the async keyword will ensure that the fu
 
 /* in a try...catch statement, code in the try block will be run and in the event of an excpetion/error, the code in the catch
 statement will run. */
+
+
+//////////////////////////////////////////////////////////////////
+// III.2 Boilerplate code for an async POST request using await //
+//////////////////////////////////////////////////////////////////
+
+async function getData() {
+    try {
+        const response = await fetch(url, {                 //
+            method: 'POST',                                 // sends request
+            body : JSON.stringify({id: '200'})              //
+        });                                                 //
+        if (response.ok) {                                          //
+            const jsonResponse = await response.json();             // handles response if successful
+            // code to execute with jsonResponse                    //
+        }                                                           //
+        throw new Error('Request Failed!');         //
+    }                                               // handles response if unsuccessful
+    catch (error) { console.log(error) };           //
+}
