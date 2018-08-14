@@ -103,7 +103,14 @@ xhr.send(data);
 // II. Promises (ES6) //
 ////////////////////////
 
-/* pending, fulfilled, rejected
+/*
+Promises are a new type of JavaScript object that represent data that will return promises.
+fetch() is a web API that can be used to create requests. fetch() will return promises.
+We can chain .then() methods to handle promises returned by fetch().
+The .json() method converts a returned promise to a JSON object.
+*/
+
+/* Promises:
 pending: when a promise is created or waiting for data
 fulfilled: the asynchronous operation was handled successfully.
 rejected: the asynchronous operation was unsuccessful.
@@ -203,9 +210,15 @@ fetch(url, {// settings object //
 
 
 
-//////////////////////////////////////////////////////////////////////////
-// III.1 Boilderplate code for an async GET request (ES8) (using await) //
-//////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////
+// III.1 Boilerplate code for an async GET request (ES8) (using await) //                   ES8 is ECMAScript 2017
+/////////////////////////////////////////////////////////////////////////
+
+/*
+async is a keyword that is used to create functions that will return promises.
+await is a keyword that is used to tell a program to continue moving through the message queue while a promise resolves.
+await can only be used within functions declared with async !
+*/
 
 const getData = async() => {
     try {
@@ -250,6 +263,10 @@ async function getData() {
         const response = await fetch(url, {                 //
             method: 'POST',                                 // sends request
             body : JSON.stringify({id: '200'})              //
+            headers : {                                     // (if headers has to be sent, too.)
+                'content-type':'application/json',          //
+                'apikey' : apiKey                           //
+            }                                               //
         });                                                 //
         if (response.ok) {                                          //
             const jsonResponse = await response.json();             // handles response if successful
@@ -259,3 +276,4 @@ async function getData() {
     }                                               // handles response if unsuccessful
     catch (error) { console.log(error) };           //
 }
+

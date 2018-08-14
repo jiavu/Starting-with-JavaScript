@@ -1,6 +1,10 @@
+Tutorials:
+
 JavaScript.info
 
 https://www.w3schools.com/js/
+
+https://learn.freecodecamp.org/
 
 =============================
 
@@ -24,6 +28,8 @@ https://caniuse.com/
 HTTP request methods (documentation)
 
 https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods
+
+=============================
 
 ==========================================================
 To transpilate from ES6 to ES5 with Babel (using a Node package)

@@ -35,6 +35,8 @@ break, continue, debugger, do ... while, for, function, if ... else, return, swi
 try ... catch,
 var, const, let (they are used to tell the browser to create variables.)
 
+async, await		// is await a keyword, or an operator, or both?
+
 //////////////////////////////
 
 Values
@@ -147,6 +149,9 @@ typeof can also be used as a function style!
 
 As an operator: typeof x;
 As a function: typeof(x);
+
+
+Operators like await.... how are they called?
 
 
 Bitwise Operators:
