@@ -262,7 +262,7 @@ async function getData() {
     try {
         const response = await fetch(url, {                 //
             method: 'POST',                                 // sends request
-            body : JSON.stringify({id: '200'})              //
+            body : JSON.stringify({id: '200'}),             //
             headers : {                                     // (if headers has to be sent, too.)
                 'content-type':'application/json',          //
                 'apikey' : apiKey                           //
