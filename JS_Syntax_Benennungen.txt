@@ -78,7 +78,7 @@ Arithmetic operators:
 an unary operator has one operand,
 x = -1; x = -x;			// x is now 1
 a binary operator has two operands,
-x = x - 1
+x = x - 1;
 a unary plus would convert operands that are not numbers.
 +true	// 1
 +""	// 0
@@ -100,17 +100,17 @@ Comparison Operators:
 ==, ===, !=, !==, >, <, >=, <=, ?		// The result of comparisons is a boolean (true or false).
 
 For comparisons of Strings the lexicographical order of Unicode is used.
-"Glow" > "Glee"	// true
-'Bee' > 'Be'	// true
+"Glow" > "Glee";	// true
+'Bee' > 'Be';		// true
 Lowercase characters have a greater index in the internal encoding table.
-"a" > "A"	// true
+"a" > "A";	// true
 Operands of different types are converted to a number by the equality operator ==.
-"01" == 1	// true
-1 > false	// true
+"01" == 1;	// true
+1 > false;	// true
 A strict equality operator === checks the equality without type conversion.
-"01" === 1		// false
-null !== undefined	// true
-null != undefined	// false
+"01" === 1;		// false
+null !== undefined;	// true
+null != undefined;	// false
 Comparison and equality check of null and undefined with 0 are edge cases:	// http://javascript.info/comparison
 Comparisons (>=) convert null to a number. Equality checks (==) do not...
 Comparisons convert unfedined to NaN.
@@ -119,7 +119,18 @@ Equality check: undefined would equal null, but not 0
 
 Logical Operators:
 
-&& (logical and), || (logical or), ! (logical not)
+&& (logical and), || (logical or), ! (logical not), !!(convert sth to boolean)
+Chains:
+alert( undefined || 1 || null );	// returns 1. Evaluation from left to right, (each operand converted to boolean), return the 
+					// first truthy value. If all are falsy, return the last one.
+alert( 1 && 2 && null && 3 );	// returns null. From left to right, if the result is false, stop and return value of that operand.
+				// If all operands were  truthy, return the last one.
+The precedence of && is higher. ! has the highest precedence.
+
+(2 > 1) && alert( "Greater than zero!" );		// same as:
+if (2 > 1) {
+	alert( "Greater than zero!" );
+}
 
 
 Ternary (Question mark) Operator:
