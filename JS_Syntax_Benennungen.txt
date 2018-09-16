@@ -1,16 +1,19 @@
-﻿https://www.w3schools.com/js/js_statements.asp
+﻿
+https://www.w3schools.com/js/js_statements.asp
 https://www.w3schools.com/js/js_syntax.asp
 ...
 http://javascript.info/
 
 
 ////////////////
-// Statements //
-////////////////
+
+Statements
+
 
 all instructions like z = x + y; are called Statments.
 JavaScript statements are composed of Values, Operators, Expressions, Keywords and Comments.
 Semicolons separate JavaScript statements.
+
 
 //////////////////////////////
 
@@ -23,11 +26,14 @@ if (condition) {
     code block;
 } // (no semicolon)
 
+
 //////////////////////////////
 
 Keywords
 
 JavaScript statements often start with a keyword to identify the JavaScript action to be performed.
+Keywords are words that are built into the JS language, the computer will recognize them an treats them
+specially.
 
 Some keywords:
 
@@ -36,6 +42,16 @@ try ... catch,
 var, const, let (they are used to tell the browser to create variables.)
 
 async, await		// is await a keyword, or an operator, or both?
+
+
+//////////////////////////////
+
+Data types
+
+Numbers, Strings, Booleans, Null, Undefined, Symbols, Objects.
+
+The first 6 of them are primitive data types. (They are fundamental.)
+
 
 //////////////////////////////
 
@@ -48,6 +64,10 @@ Literals (?): 10.634, 5, "String", 'String', true/false, null, undefined, NaN, I
 
 null is the same as None (empty, nothing) in Python. 
 NaN represents a computional error. E. g. "string" / 2
+
+Values can be evaluated as truthy or falsy when checked as a condition.
+0, "" (empty string), null, undefined, NaN	// falsy values.
+
 
 //////////////////////////////
 
@@ -63,11 +83,43 @@ You can declare many variables in one statement. Separate by comma.
 var person = "Me", price = 9.99, currency = "€";
 
 
+//////////////////////////////
+
+Expressions
+
+An expression is a combination of values, variables and operators, which computes to a value.
+
+5 * 10
+y + 1
+'String1' + 'String2'
+
+
+//////////////////////////////
+
+Comments
+
+/* several lines */
+// single line comment
+
+
+//////////////////////////////
+
+Identifiers
+
+Identifiers are names. They are used to name variables (and keywords, and functions, and labels).
+In JS, the first character must be a letter, or an underscore, or a dollar sign.
+
+
+//////////////////////////////
+
 ///////////////
 // Operators //
 ///////////////
 
+//////////////////////////////
+
 Arithmetic operators:
+
 +, -, *, /
 
 % (Modulus, Division Remainder)
@@ -85,6 +137,15 @@ a unary plus would convert operands that are not numbers.
 + concatenates strings and non-strings with strings. // 4 + 5 + "px" = "9px"
 
 
+//////////////////////////////
+
+Dot operator:
+
+"I am a string".length;
+
+
+//////////////////////////////
+
 Assignment operators:
 
 =, +=, -=, *=, /=, %=
@@ -94,6 +155,8 @@ var x, y; x = 5; y = 6;
 Strings + numbers: The result of adding "5" + 2 + 3 is 523
 Numbers + strings: The result of adding 2 + 3 + "5" is 55
 
+
+//////////////////////////////
 
 Comparison Operators:
 
@@ -117,14 +180,21 @@ Comparisons convert unfedined to NaN.
 Equality check: undefined would equal null, but not 0
 
 
+//////////////////////////////
+
 Logical Operators:
 
 && (logical and), || (logical or), ! (logical not), !!(convert sth to boolean)
-Chains:
+
+
+Chains and short circuit evaluations:
+
 alert( undefined || 1 || null );	// returns 1. Evaluation from left to right, (each operand converted to boolean), return the 
 					// first truthy value. If all are falsy, return the last one.
 alert( 1 && 2 && null && 3 );	// returns null. From left to right, if the result is false, stop and return value of that operand.
 				// If all operands were  truthy, return the last one.
+
+
 The precedence of && is higher. ! has the highest precedence.
 
 (2 > 1) && alert( "Greater than zero!" );		// same as:
@@ -132,8 +202,15 @@ if (2 > 1) {
 	alert( "Greater than zero!" );
 }
 
+Short circuit evaluation:
+
+let defaultName = username || "Stranger";	// if username isn't defined, defaultName will be "Stranger".
+
+
+//////////////////////////////
 
 Ternary (Question mark) Operator:
+
 (ternary because it has 3 operands)
 let result = condition ? value1 : value2;
 same as:
@@ -152,6 +229,8 @@ let result = condition1 ? value1 :
 	value4;
 
 
+//////////////////////////////
+
 Type Operators:
 
 typeof, instanceof
@@ -165,33 +244,43 @@ As a function: typeof(x);
 Operators like await.... how are they called?
 
 
+//////////////////////////////
+
 Bitwise Operators:
 ..........
 
 //////////////////////////////
+//////////////////////////////
 
 
-Expressions
+Objects
 
-An expression is a combination of values, variables and operators, which computes to a value.
+E. g. built-in objects:
+Math.random();			// returns a random number between 0 an 1.
+Math.floor(Math.random() * 50);	// returns a random number between 0 and 50, rounded to a whole number.
 
-5 * 10
-y + 1
-'String1' + 'String2'
+Math is the object, random and floor are the methods.
+
 
 //////////////////////////////
 
-Comments
+Properties
 
-/* several lines */
-// single line comment
+When a new piece of data is introduced, the browser saves it as an instance of the data type.
+Every instance has properties. E. g. strings: .length stores the number of characters.
+
+"String".length;	// returns 6
+
 
 //////////////////////////////
 
-Identifiers
+Methods
 
-Identifiers are names. They are used to name variables (and keywords, and functions, and labels).
-In JS, the first character must be a letter, or an underscore, or a dollar sign.
+JS also provides methods for every data type.
+
+"I am a string".startsWith("I");	// returns true
+"Hello".toUpperCase();			// "HELLO"
+
 
 //////////////////////////////
 

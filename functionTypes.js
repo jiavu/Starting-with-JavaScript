@@ -73,6 +73,9 @@ const varName3 = par => par + 1;
 var sum = new Function('a', 'b', 'return a + b');
 ergebnis = sum(2, 6);
 
+/* The Function constructor allows executing code in the global scope, prompting
+better programming habits and allowing for more efficient code minification. */
+
 
 ////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////

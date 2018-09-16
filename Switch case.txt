@@ -1,0 +1,14 @@
+
+let myVariable = "zwei";
+
+switch (myVariable) {
+	case "eins" :
+		console.log("Fall eins");
+		break;
+	case "zwei" :
+		console.log("Fall zwei");
+		break;
+	default:
+		console.log("Fall drei");
+		break;
+}
