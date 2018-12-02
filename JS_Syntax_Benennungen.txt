@@ -63,7 +63,7 @@ Fixed values are called literals. variable values are called variables.
 Literals (?): 10.634, 5, "String", 'String', true/false, null, undefined, NaN, Infinity, -Infinity
 
 null is the same as None (empty, nothing) in Python. 
-NaN represents a computional error. E. g. "string" / 2
+NaN (Not a Number) represents a computional error. E. g. "string" / 2
 
 Values can be evaluated as truthy or falsy when checked as a condition.
 0, "" (empty string), null, undefined, NaN	// falsy values.
