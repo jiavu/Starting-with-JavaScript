@@ -90,7 +90,7 @@ xhr.onreadystatechange = () => {
 
 xhr.open('POST', url);
 
-// optional?
+// optional
 xhr.setRequestHeader("Header key", "Header value"); // set several setRequestHeaders for several key:value pairs ..
 xhr.setRequestHeader("apiKey", apiKey);
 //
@@ -277,3 +277,48 @@ async function getData() {
     catch (error) { console.log(error) };           //
 }
 
+
+
+////////////
+// jQuery //
+////////////
+
+const url = "https://some-url/endpoint"
+
+$(document).ready(function() {
+    $.ajax({
+        url: url,
+        type:"GET",
+        success: function(result) {
+            console.log(result);
+        },
+        error: function(error) {
+            console.log(`Error: ${error}`);
+        }
+
+    })
+})
+
+// or simpler by get()
+
+$.get(url, function(data, status) {
+    console.log(`${data}`);
+})
+
+// post:
+
+const data = {
+    name: "My name",
+    id: 99
+}
+
+$.get(url, data, function(data, status) {
+    console.log(`${data} and status is ${status}.`);
+
+})
+
+// json (only retrieves data that is in json format):
+
+$.getJSON(url, function(result) {
+    console.log(result);
+})

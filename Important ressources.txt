@@ -6,12 +6,14 @@ https://www.w3schools.com/js/
 
 https://learn.freecodecamp.org/
 
+The most usual http requests:
+https://medium.freecodecamp.org/here-is-the-most-popular-ways-to-make-an-http-request-in-javascript-954ce8c95aaa
 =============================
 
 JavaScript References:
 
 https://developer.mozilla.org/en-US/docs/Web/JavaScript
-(auch in Deutsch Ÿbersetzt)
+(auch in Deutsch ï¿½bersetzt)
 
 (Wichtig zum Beispiel: iterator methods, siehe unter Array
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array
