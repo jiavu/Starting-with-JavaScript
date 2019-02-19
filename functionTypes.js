@@ -19,7 +19,7 @@ function fName(par1, par2) {
 } //no semi-colon!
 
 /* Call function:
-par1 and par2 are paramenters, but when we call the function,
+par1 and par2 are parameters, but when we call the function,
 the inputs (arg1, arg2) are called arguments. */
 fName(arg1, arg2);
 
@@ -98,6 +98,7 @@ object1.method1()               // call method.
 // Method syntax ES6 //
 
 const object2 = {
+    
     method() {return "something"}
 };
 

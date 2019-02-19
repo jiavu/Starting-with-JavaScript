@@ -78,7 +78,7 @@ const data = JSON.stringify ({id : '200'});             // JSON.stringify() is a
 /* Converts data (converts a value) to a JSON string. By converting the value to a
    string, we can then send the data to a server. */
 
-xhr.responstType = 'json';
+xhr.responseType = 'json';
 
 xhr.onreadystatechange = () => {
     if (xhr.readyState === XMLHttpRequest.DONE) {
@@ -250,7 +250,7 @@ async function getData() {          // the async keyword will ensure that the fu
     }
 }
 
-/* in a try...catch statement, code in the try block will be run and in the event of an excpetion/error, the code in the catch
+/* in a try...catch statement, code in the try block will be run and in the event of an exception/error, the code in the catch
 statement will run. */
 
 
@@ -270,7 +270,8 @@ async function getData() {
         });                                                 //
         if (response.ok) {                                          //
             const jsonResponse = await response.json();             // handles response if successful
-            // code to execute with jsonResponse                    //
+            // code to execute with jsonResponse, i. e.             //
+            return jsonResponse;                                    //
         }                                                           //
         throw new Error('Request Failed!');         //
     }                                               // handles response if unsuccessful
