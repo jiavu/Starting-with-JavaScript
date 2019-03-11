@@ -243,7 +243,7 @@ async function getData() {          // the async keyword will ensure that the fu
                                                         // until the promise status is resolved.
             return jsonResponse;            // and/or code to execute with jsonResponse.
         }
-    throw new Error("Request failed!");
+        throw new Error("Request failed!");
     }
     catch (error) {
     console.log(error)  // Code block for exception handling, e. g. redirect to another page.

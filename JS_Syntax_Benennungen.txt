@@ -46,12 +46,15 @@ async, await		// is await a keyword, or an operator, or both?
 
 //////////////////////////////
 
-Data types
+Data types: 7
 
 Numbers, Strings, Booleans, Null, Undefined, Symbols, Objects.
 
 The first 6 of them are primitive data types. (They are fundamental.)
 
+functions belong to the object type.	// But typeof treats them differently. Formally, it’s incorrect.
+
+symbols are unique identifiers.		// what are symbols?
 
 //////////////////////////////
 
