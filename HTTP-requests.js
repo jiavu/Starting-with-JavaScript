@@ -280,6 +280,26 @@ async function getData() {
 
 
 
+/////////////////////////////////
+// IV Request Object and fetch //
+/////////////////////////////////
+
+let newRequest = new Request(
+  url, {
+    method: 'POST',
+    headers: new Headers( {'Content-Type': 'application/json'} ),
+    body: JSON.stringify( {
+      // this is a request object
+    })
+  }
+);
+
+fetch( newRequest ).then(
+  data => data.json()
+).then( data => console.log(data) );
+
+
+
 ////////////
 // jQuery //
 ////////////
