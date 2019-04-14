@@ -284,6 +284,8 @@ async function getData() {
 // IV Request Object and fetch //
 /////////////////////////////////
 
+// via request constructor:
+
 let newRequest = new Request(
   url, {
     method: 'POST',
